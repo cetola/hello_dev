@@ -1,12 +1,16 @@
-OBJS = hello simple
+OBJS = hello simple count
 CCi = gcc
 
-all: hello simple
+all: hello simple count
 
 hello:
 	$(CC) hello.c -o hello
 
 simple:
 	$(CC) simple.c -o simple -I/usr/include/curl -I/usr/include/cups 
+
+count:
+	$(CC) count.c -o count
+
 clean:
 	rm -rf $(OBJS)

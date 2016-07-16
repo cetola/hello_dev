@@ -9,6 +9,6 @@
  
 int main(void)
 {
-  printf("hello");
+  printf("hello simple.\n");
   return 0;
 }
