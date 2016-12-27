@@ -7,7 +7,7 @@ hello:
 	$(CC) hello.c -o hello
 
 simple:
-	$(CC) simple.c -o simple -I/usr/include/curl -I/usr/include/cups 
+	$(CC) simple.c -o simple -lcurl
 
 count:
 	$(CC) count.c -o count
