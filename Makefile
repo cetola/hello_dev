@@ -1,7 +1,7 @@
 OBJS = hello simple count
 CCi = gcc
 
-all: hello simple count
+all: hello count
 
 hello:
 	$(CC) hello.c -o hello
