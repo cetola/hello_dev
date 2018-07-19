@@ -1,7 +1,7 @@
 #include <asm/unistd.h>
 #include <syscall.h>	
 
-	.file	"konichiwa.c"
+	.file	"konichiwa.S"
 	.section	.rodata
 hello:
 	.string	"Hello, World!\n"
@@ -9,10 +9,6 @@ hello:
 	.globl	_start
 	.type	_start, @function
 _start:
-	## stack stuff
-	;pushq	%rbp
-	;movq	%rsp, %rbp
-
 	## write
 	movl	$14, %edx
 	movl	$hello, %esi
@@ -24,11 +20,6 @@ _start:
 	movl	$0, %edi
 	movl	$SYS_exit, %eax
 	syscall
-
-	## exit 0
-	;movl	$0, %eax
-	;popq	%rbp
-	;ret
 
 .size	_start, .-_start
 	.section	.note.GNU-stack,"",@progbits
