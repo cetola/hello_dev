@@ -32,6 +32,8 @@
 *.dSYM/
 
 hello
+rv-hello
 simple
 count
 konichiwa
+rv-konichiwa
